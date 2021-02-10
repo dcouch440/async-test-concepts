@@ -9,10 +9,18 @@ export class GifService {
       }
       return response.json();
     } catch(error) {
-      return error.message;
+      return Error(error.message);
     }
   }
   static async receive(query) {
-    return await this.grab(query).then(data => data.data[0].images.original.url);
+    return await this.grab(query).then(
+      response => {
+        if (response instanceof Error) {
+          console.log(response.message);
+        } else {
+          return response.data[0].images.original.url;
+        }
+      }
+    );
   }
 }

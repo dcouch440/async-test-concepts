@@ -5,23 +5,25 @@ export class WeatherService {
     try {
       const response = await fetch(url);
       if (!response.ok) {
-        throw Error({
-          errorMessage: response.statusText
-        });
+        throw Error(response.statusText);
       }
       return response.json();
     } catch (error) {
-      return Error({
-        criticalError: error.message
-      });
+      return Error(error.message);
     }
   }
   static async receive(query) {
-    return await this.grab(query).then(data => {
-      return {
-        feel: data.weather[0].main, 
-        temp: data.main.temp
-      };
-    });
+    return await this.grab(query).then(
+      response => {
+        if (response instanceof Error) {
+          console.log(response.message);
+        } else {
+          return {
+            feel: response.weather[0].main, 
+            temp: response.main.temp
+          };
+        }
+      }
+    );
   }
 }
