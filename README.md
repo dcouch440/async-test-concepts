@@ -1,104 +1,27 @@
-# {Project Name}
-#### *Co-Created By:*
-#### *Co-Created By:*
-#### *{Brief Project Description}*
-<!-- Check list
-- Project Name
-- Author
-- Brief Description
-- Description
-- Specs
-- Link in gh-pages
-- Project repo
-- git clone repo link
-- date
- -->
+# Async Test Concepts
+#### *Created By: David Couch*
+
+#### *This is practice for school.*
 * * *
 
 ## Description  
-{project description}
+This is a semi functional/ non finalized project made to test api calls, destructuring, async api calls, and passing objects from functions with async and multiple api call chains in mine. The app makes a call based on user input, calls the first api (weather), gets the description of the day and grabs a gif for it.
 
-* * *
-## Specs
-
-
-* * *
-
-## Technologies used
-* HTML
-* CSS
-* Git and Github
-* JavaScript
-
-* * *
+This projects techniques or functionality does not represent me or my coding knowledge.
 
 
-## Installation : 
-### Want to see this webpage now?
-###### See this web page in action on [Github Pages]({repo})
+### Install
+git clone (repo link)
 
-* Go to ( {project repo} ).
+once the project is open.
 
-*  Navigate to the code button on the github website.\
-![Code button](/img/README/code.PNG)
+npm run install
 
-* Click on the code button to open the menu.\
-![Github Repo Example](/img/README/HTTPS.png)
+then run
 
-- Copy the HTTPS code by clicking the clipboard next to the link.
-
-- Within your Bash terminal navigate to your desired location by using cd fallowed by your desired directory.
-```bash
- cd Desktop
-``` 
-
-- Once you have chosen your desired directory use the command.
-```bash 
-git clone {git repo}
-```
-
-<div 
-  style="
-    background-color: #d1ecf1; 
-    color: grey; padding: 6px; 
-    font-size: 9px; 
-    border-radius: 5px; 
-    border: 1px solid #d4ecf1; 
-    margin-bottom: 12px"
-> 
-  <span 
-    style="
-      font-size: 12px; 
-      font-weight: 600; 
-      color: #0c5460;"
-  >
-    ⓘ
-  </span>
-  <span 
-    style="
-      font-size: 12px; 
-      font-weight: 900; 
-      color: #0c5460;
-      margin-bottom: 24px"
-  >
-    Note : 
-  </span> 
-  If you have any problems make sure your HTTPS code is correct! The example above might not be the most recent HTTPS code!
-</div>
-
-
-* Then after the process is completed use the command.
-
-``` bash
-code .
-```
-
-
+npm run start
 ## Addition comments:
-* Created on x/xx/21
-
-
-* * *
+* Created on 2/9/21
 
 ## License:
 > *&copy; David Couch, 2021*
