@@ -5,7 +5,7 @@
 * * *
 
 ## Description  
-This is a semi functional/ non finalized project made to test api calls, destructuring, async api calls, and passing objects from functions with async and multiple api call chains in mine. The app makes a call based on user input, calls the first api (weather), gets the description of the day and grabs a gif for it.
+This is a semi functional/ non finalized project made to test api calls, destructuring, async api calls, returning async object values with multiple api call chains in mind. The app makes a call based on user input, calls the first api (open weather), gets the description of the day and grabs a gif from it with the giphy api.
 
 This projects techniques or functionality does not represent me or my coding knowledge.
 
