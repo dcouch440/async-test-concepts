@@ -4,7 +4,7 @@ export const search = (thisArg) => {
     const {value} = document.getElementById('search-input');
     const weatherType = await WeatherService.receive(value);
     return {
-      weatherGif: GifService.receive(weatherType.feel),
+      async_weatherGif: GifService.receive(weatherType.feel),
       weatherFeelsLike: weatherType.feel,
       weatherFeelsTemp: weatherType.temp
     };
@@ -15,7 +15,7 @@ export const search = (thisArg) => {
       const textElement = document.getElementById('sky');
       (async () => {
         const api = await callApis();
-        gifElement.innerHTML = `<img src=${await api.weatherGif}>`;
+        gifElement.innerHTML = `<img src=${await api.async_weatherGif}>`;
         textElement.innerHTML = `Feels like: ${api.weatherFeelsLike}, Temp: ${api.weatherFeelsTemp}`;
       })();
     });
