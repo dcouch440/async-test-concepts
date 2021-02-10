@@ -5,13 +5,14 @@ export class WeatherService {
     try {
       const response = await fetch(url);
       if (!response.ok) {
-        throw Error(response.statusText);
+        throw Error({
+          errorMessage: response.statusText
+        });
       }
       return response.json();
     } catch (error) {
       return Error({
-        message: this.statusText,
-        error: error
+        criticalError: error.message
       });
     }
   }
