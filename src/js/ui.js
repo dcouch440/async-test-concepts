@@ -1,11 +1,12 @@
 export const search = (thisArg) => {
   const {GifService, WeatherService} = thisArg;
-  const getBoth = async () => {
+  const callApis = async () => {
     const {value} = document.getElementById('search-input');
     const weatherType = await WeatherService.receive(value);
     return {
-      weatherFeelGif: GifService.receive(weatherType.feel),
-      weatherFeelDes: weatherType.feel
+      weatherGif: GifService.receive(weatherType.feel),
+      weatherFeelsLike: weatherType.feel,
+      weatherFeelsTemp: weatherType.temp
     };
   };
   document.getElementById("giphy-search").addEventListener(
@@ -13,9 +14,9 @@ export const search = (thisArg) => {
       const gifElement = document.getElementById('gif');
       const textElement = document.getElementById('sky');
       (async () => {
-        const returnData = await getBoth();
-        gifElement.innerHTML = `<img src=${await returnData.weatherFeelGif}>`;
-        textElement.innerHTML = `${await returnData.weatherFeelDes}`;
+        const api = await callApis();
+        gifElement.innerHTML = `<img src=${await api.weatherGif}>`;
+        textElement.innerHTML = `Feels like: ${api.weatherFeelsLike}, Temp: ${api.weatherFeelsTemp}`;
       })();
     });
 };
