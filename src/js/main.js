@@ -5,6 +5,6 @@ import '../css/styles.css';
 
 document.addEventListener(
   "DOMContentLoaded", () => {
-    ui.search({GifService, WeatherService});
+    ui.search({GifService,WeatherService});
   }
 );

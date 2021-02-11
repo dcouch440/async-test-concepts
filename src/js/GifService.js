@@ -8,7 +8,7 @@ export class GifService {
         throw Error(response.statusText);
       }
       return response.json();
-    } catch(error) {
+    } catch (error) {
       return Error(error.message);
     }
   }

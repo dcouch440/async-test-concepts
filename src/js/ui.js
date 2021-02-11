@@ -14,9 +14,10 @@ export const search = (thisArg) => {
       const gifElement = document.getElementById('gif');
       const textElement = document.getElementById('sky');
       (async () => {
-        const api = await callApis();
+        const api = await callApis();   
         gifElement.innerHTML = `<img src=${await api.asyncGif}>`;
         textElement.innerHTML = `Feels like: ${api.syncFeel}, Temp: ${api.syncTemp}`;
       })();
-    });
+    }
+  );
 };
